@@ -1,4 +1,208 @@
+:root {
+  --red: #990000;
+  --white: #f5f5f5
+}
+
 html {
   height: 100%;
   width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--red);
+  background-image: url("assets/OU-Background-Red.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+/* JUMBOTRON / HEADER */
+
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--white);
+  height: 70vh;
+  z-index: -2;
+}
+
+
+.flush-left img {
+  justify-content: left;
+  position: relative;
+  /* display: absolute; */
+  width: 85vh;
+  top: -150px;
+  left: -150px;
+  z-index: -1;
+}
+
+.flush-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  left: -175px;
+  bottom: -1px;
+  width: 100%;
+}
+
+.flush-right img {
+  width: 300px;
+  position: relative;
+  left: 50%;
+  right: 1px;
+  padding-top: 30px;
+}
+
+.flush-right .header-text {
+  padding: 20px;
+  width: 50vw;
+}
+
+/* BODY */
+.main {
+  z-index: 2;
+  background-color: var(--white);
+  background-image: url("https://i.pinimg.com/736x/c8/cd/80/c8cd80c1ff123b37d5be09783e812045.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw ;
+  padding: 45px 70px;
+}
+
+/* DEMANDS */
+.demands {
+  font-weight: bold;
+}
+
+h3 {
+  color: var(--red) !important;
+  font-size: 36px;
+}
+
+ol {
+  font-size: 24px;
+}
+
+button {
+  font-family: Arial, sans-serif;
+}
+
+.button-group {
+  display: flex;
+  justify-content: right;
+}
+
+.button {
+  color: var(--white);
+  background-color: var(--red);
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid black;
+}
+
+.collapsible {
+  width: 100%;
+  background-color: none;
+  color: var(--red);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  padding: 10px 0px;
+}
+
+.collapsible::after {
+
+  color: var(--red) !important;
+  font-weight: bold;
+  float: right;
+  align-self: flex-end;
+  margin-left: 5px;
+  content: '+';
+}
+
+.active::after {
+  align-self: flex-end;
+  color: var(--red);
+  content: '-';
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  font-weight: light;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .flush-left {
+    height: 40vh;
+    text-align: center;
+  }
+
+  .flush-left img {
+    justify-content: center;
+    width: 100%;
+    max-width: 370px;
+    top: -40%;
+    left: 0px;
+    z-index: -1;
+  }
+
+  .flush-right {
+    display: block;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .flush-right img {
+    width: 70%;
+    left: 0px;
+    right: 0px;
+    padding-top: 20px;
+  }
+
+  .flush-right .header-text {
+    padding: 0px;
+    width: 90%;
+    margin: 20px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* BODY */
+  .main {
+    padding: 25px;
+  }
+
 }
