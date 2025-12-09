@@ -50,9 +50,9 @@ p{
 .jumbotron {
   display: flex;
   justify-content: space-between;
-
   color: var(--white);
   height: 70vh;
+  width: 100%;
   z-index: -2;
 }
 
@@ -99,9 +99,16 @@ p{
   padding: 45px 70px;
 }
 
+.tool {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+}
+
 /* DEMANDS */
 .demands {
   font-weight: bold;
+  width: 60%;
 }
 
 ol {
@@ -114,8 +121,11 @@ button {
 }
 
 .button-group {
+  width: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: right;
+  align-items: center;
 }
 
 .button {
@@ -229,6 +239,20 @@ button {
     width: 90%;
     margin: 20px;
     text-align: left;
+  }
+
+  .tool {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .demands{
+    width: 100%;
+  }
+
+  .button-group{
+    width: 100%;
   }
 
   h1{
