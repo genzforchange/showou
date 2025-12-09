@@ -34,7 +34,7 @@ h2{
 
 h3{
   font-family: Abolition, sans-serif;
-  font-size: 55px;
+  font-size: 64px;
   letter-spacing: 2px;
   color: var(--red) !important;
 }
@@ -57,7 +57,7 @@ p{
 }
 
 .flush-left {
-  width: 40%
+  width: 40%;
 }
 
 .flush-left img {
@@ -91,7 +91,7 @@ p{
   background-image: url("https://i.pinimg.com/736x/c8/cd/80/c8cd80c1ff123b37d5be09783e812045.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 45px 70px;
+  padding: 25px;
 }
 
 .tool {
@@ -111,19 +111,17 @@ ol {
   line-height: 34px;
 }
 
-button {
-  font-family: Arial, sans-serif;
-}
-
 .button-group {
   width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: right;
+  align-content: right;
+  align-items: flex-end;
 }
 
 .button {
+  font-family: Arial, sans-serif;
   color: var(--white);
   background-color: var(--red);
   border: none;
@@ -131,7 +129,7 @@ button {
   margin: 10px;
   font-weight: bold;
   font-size: 21px;
-  width: 60%;
+  width: 75%;
 }
 
 /* FAQ */
@@ -181,15 +179,28 @@ button {
   font-weight: regular;
 }
 
+.essay{
+  width: 25vw;
+  margin: 15px;
+}
+
 /* FOOTER */
 
 .footer{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 10vh;
+  height: 15vh;
+}
+
+.footer .logos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footer p{
@@ -198,19 +209,17 @@ button {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  margin: 0px;
+  margin-bottom: 50px;
 }
 
 .rw-sticker {
   height: 10vh;
-  margin: 0px auto;
-  margin-top: -75px;
+  margin: -50px 0px 0px 50px;
 }
 
 .ou-flag-footer{
   height: 10vh;
-  margin: 0px auto;
-  margin-top: -75px;
+  margin: -50px 50px 0px 0px;
 }
 
 /* MOBILE */
@@ -232,7 +241,7 @@ button {
   .flush-left img {
     justify-content: center;
     width: 100%;
-    top: -45%;
+    top: -75%;
     left: 0px;
     z-index: -1;
   }
@@ -242,6 +251,7 @@ button {
     width: 90%;
     justify-content: center;
     padding: 20px;
+    margin-top: -75px;
   }
 
   .flush-right img {
@@ -266,15 +276,17 @@ button {
 
   .button-group{
     width: 100%;
+    margin-bottom: 25px;
   }
 
   .button{
     width: 100%;
+    margin: 0;
   }
 
   h1{
-    font-size: 46px;
-    line-height: 55px;
+    font-size: 55px;
+    line-height: 64px;
   }
 
   h2 {
@@ -283,8 +295,8 @@ button {
   }
 
   h3 {
-    font-size: 34px;
-    line-height: 40px;
+    font-size: 46px;
+    line-height: 55px;
   }
 
   ol {
@@ -306,83 +318,102 @@ button {
   .main {
     padding: 25px;
   }
-
-  .footer {
+  
+  .essay{
+    width: 100%;
+    margin: 10px;
+  }
+  .essay-container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 10vh;
   }
 
-  .footer p{
-    font-size: 13px;
+  .footer .logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
-  
+
+  .footer p{
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 50px;
+  }
+
   .rw-sticker {
     height: 5vh;
-    margin-top: -75px;
+    margin: -20px 0px 0px 25px;
   }
 
   .ou-flag-footer{
     height: 5vh;
-    margin-top: -75px;
+    margin: -20px 25px 0px 0px;
   }
 }
 
 /* TABLET */
-@media screen and (min-width: 769px) and (max-width: 1024px){
+
+  @media screen and (min-width: 765px) and (max-width: 1024px) {
   .jumbotron {
     height: 100%;
     display: block;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
   }
 
   .flush-left {
+    width: 100%;
     height: 40vh;
     text-align: center;
   }
 
   .flush-left img {
     justify-content: center;
-    width: 100%;
-    max-width: 370px;
-    top: -45%;
+    width: 75%;
+    max-width: 500px;
+    top: -80%;
     left: 0px;
     z-index: -1;
   }
 
   .flush-right {
     display: block;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
+    width: 90%;
     justify-content: center;
-    margin-top: 0px;
+    padding: 30px;
+    margin-top: 0px
   }
 
   .flush-right img {
-    width: 80%;
-    left: 0px;
-    right: 0px;
-    padding-top: 0px;
+    width: 75%;
+    max-width: 500px;
+    padding: 0px;
   }
 
   .flush-right .header-text {
     padding: 0px;
-    width: 90%;
-    margin: 20px;
     text-align: left;
   }
 
   .tool {
-    padding: 20px 0px;
+    padding: 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .demands{
@@ -391,26 +422,32 @@ button {
 
   .button-group{
     width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .button{
+    width: 100%;
+    margin: 0;
   }
 
   h1{
-    font-size: 46px;
-    line-height: 55px;
+    font-size: 64px;
+    line-height: 76px;
   }
 
   h2 {
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 26px;
+    line-height: 34px;
   }
 
   h3 {
-    font-size: 46px;
-    line-height: 55px;
+    font-size: 40px;
+    line-height: 46px;
   }
 
   ol {
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 26px;
+    line-height: 34px;
   }
   .button-group {
     flex-direction: column;
@@ -426,5 +463,41 @@ button {
 
   .main {
     padding: 25px;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+  }
+
+  .footer .logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .footer p{
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+
+  .rw-sticker {
+    height: 6vh;
+    margin: -25px 0px 0px 25px;
+  }
+
+  .ou-flag-footer{
+    height: 6vh;
+    margin: -25px 25px 0px 0px;
   }
 }
