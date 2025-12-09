@@ -106,9 +106,9 @@ function generateRandomEmail() {
   const leaders = leadersSynonyms[Math.floor(Math.random() * leadersSynonyms.length)];
 
   // get 3 emails from each list and combine them into emailAddresses array!!
-  const randomOU = [...ouEmailAddresses].sort(() => Math.random() - 0.5).slice(0, 3);
-  const randomOK = [...ouEmailAddresses].sort(() => Math.random() - 0.5).slice(0, 3);
-  const emailAddresses = [...randomOU, ...randomOK];
+  // const randomOU = [...ouEmailAddresses].sort(() => Math.random() - 0.5).slice(0, 3);
+  // const randomOK = [...ouEmailAddresses].sort(() => Math.random() - 0.5).slice(0, 3);
+  // const emailAddresses = [...randomOU, ...randomOK];
 
   const subjectLine = `${urgent} ${demandSubject} ${colon} ${reinstateSubject} ${subjectBase}`
   const emailBody =
