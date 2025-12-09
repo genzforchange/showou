@@ -65,13 +65,13 @@ const continuousSynonyms = ["continuous", "ongoing", "persistent", "unending", "
 
 // OK STATE PARAGRAPH 3:
 const oklahomaSynonyms = ["Oklahoma", "OK"];
-const leaders = ["leaders", "officials", "representatives", "government officials", "politicians", "lawmakers", "legislators", "policy-makers"];
+const leadersSynonyms = ["leaders", "officials", "representatives", "government officials", "politicians", "lawmakers", "legislators", "policy-makers"];
 
 // RELATIONSHIP
 const relationship = ["a student", "a faculty/staff member", "an alumnus", "a community member"];
 
 function generateRandomEmail() {
-  // RANDOMIZED SYNONYMS
+  // RANDOMIZED SYNONYMS everytime func is called
   const urgent = URGENTSynonyms[Math.floor(Math.random() * URGENTSynonyms.length)];
   const demandSubject = demandSubjectSynonyms[Math.floor(Math.random() * demandSubjectSynonyms.length)];
   const colon = colonSynonyms[Math.floor(Math.random() * colonSynonyms.length)];
@@ -102,16 +102,16 @@ function generateRandomEmail() {
 
   const continuous = continuousSynonyms[Math.floor(Math.random() * continuousSynonyms.length)];
 
-  // const oklahoma = oklahomaSynonyms[Math.floor(Math.random() * oklahomaSynonyms.length)];
-  // const leader = leaders[Math.floor(Math.random() * leaders.length)];
+   const oklahoma = oklahomaSynonyms[Math.floor(Math.random() * oklahomaSynonyms.length)];
+   const leaders = leaders[Math.floor(Math.random() * leaders.length)];
 
   // get 3 emails from each list and combine them into emailAddresses array!!
   const randomOU = [...OUemailAddresses].sort(() => Math.random() - 0.5).slice(0, 3);
   const randomOK = [...OKemailAddresses].sort(() => Math.random() - 0.5).slice(0, 3);
   const emailAddresses = [...randomOU, ...randomOK];
-  
+
   const subjectLine = `${urgent} ${demandSubject} ${colon} ${reinstateSubject} ${subjectBase}`
-  const emailBody = `${greeting} ${admin},
+  const emailBody = `${greeting} ${admin} and ${oklahoma} ${leaders},
    As a ${concerned} community member, I am ${writing} to ${express} ${extreme} ${moralOutrage} over your ${decision} to place Graduate Teaching Assistant Mel Curth on administrative leave.
 
     The OU administration’s capitulation ${sets} a ${dangerous} ${precedent} at the ${university} by emboldening a culture in which academic integrity is optional, and professors can be bullied into overriding their professional judgment to avoid political retaliation.
@@ -134,7 +134,7 @@ function generateRandomEmail() {
   emailCount("sendEmailButton")
 }
 
-// Attach the function to a button
+// Attach the function to a button to track clicks 
 document
   .getElementById("sendEmailButton")
   .addEventListener("click", generateRandomEmail);
@@ -144,7 +144,7 @@ async function emailCount(buttonID) {
   // const url = `https://ptb-tracking.gz4c.org/?button=${buttonID}`;
   // const url = 'https://pumpthebreaks-tracking-368099953691.us-central1.run.app?button=0'
 
-  const resposne = fetch(url)
+  const response = fetch(url)
     .then((response) => response.json())
     .then((data) => console.log(data));
 }

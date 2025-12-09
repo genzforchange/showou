@@ -125,7 +125,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: right;
-  align-items: center;
 }
 
 .button {
@@ -136,6 +135,7 @@ button {
   margin: 10px;
   font-weight: bold;
   font-size: 21px;
+  width: 75%;
 }
 
 /* FAQ */
