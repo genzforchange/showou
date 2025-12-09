@@ -142,9 +142,7 @@ document
   .addEventListener("click", generateRandomEmail);
 
 async function emailCount(buttonID) {
-  // update w sean
-  // const url = `https://ptb-tracking.gz4c.org/?button=${buttonID}`;
-  // const url = 'https://pumpthebreaks-tracking-368099953691.us-central1.run.app?button=0'
+
   const url = 'https://oklahoma-tracking-368099953691.us-east4.run.app?button=0'
 
   const response = fetch(url)
