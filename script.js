@@ -20,16 +20,12 @@ for (i = 0; i < coll.length; i++) {
 
 
 // emails 
-// const okEmailAddresses = ["regentholloway@ou.edu", 'regentnagel@ou.edu', 'regentstevenson@ou.edu', 'regentross@ou.edu', 'regentbraught@ou.edu', 'regentwaits@ou.edu', 'regentwilliams@ou.edu', 'daniel_hamlin@ou.edu', 'stitt@gov.ok.gov'];
-// const ouEmailAddresses = ["mountford@ou.edu", "ldmiller@ou.edu", "cwalker@ou.edu", "dsurratt@ou.edu", "officeofthepresident@ou.edu", "andre.wright@ou.edu"];
-const emailAddresses = ["regentholloway@ou.edu",
-  "integrity@ou.edu", 'regentnagel@ou.edu', 'regentstevenson@ou.edu', 'regentross@ou.edu', 'regentbraught@ou.edu', 'regentwaits@ou.edu', 'daniel_hamlin@ou.edu', "mountford@ou.edu", "ldmiller@ou.edu",
-  "studentaffairs@ou.edu", "dsurratt@ou.edu", "officeofthepresident@ou.edu", "andre.wright@ou.edu"];
+const emailAddresses = ["regentholloway@ou.edu","integrity@ou.edu", 'regentnagel@ou.edu', 'regentstevenson@ou.edu', 'regentross@ou.edu', 'regentbraught@ou.edu', 'regentwaits@ou.edu', 'daniel_hamlin@ou.edu', "mountford@ou.edu", "ldmiller@ou.edu","studentaffairs@ou.edu", "dsurratt@ou.edu", "officeofthepresident@ou.edu", "andre.wright@ou.edu"]; // 14
 
 // SUBJECTS SYNONYMS - subjectLine built and used below 
 const URGENTSynonyms = ["URGENT", "IMMEDIATE", "PRESSING", "CRITICAL", "IMPORTANT", "PRIORITY", "PRESSING"];
 const demandSubjectSynonyms = ["DEMAND", "REQUEST", "ASK", "NEED", "ACTION"];
-const colonSynonyms = [":", " - ", " -- "];
+const colonSynonyms = [":", " - ", " -- ", " "];
 
 const reinstateSubjectSynonyms = ["REINSTATE", "RESTORE"];
 const subjectBase = "MEL CURTH IN FULL STANDING";
@@ -49,9 +45,9 @@ const moralOutrageSynonyms = ["moral indignation", "moral indignation", "moral d
 const decisionSynonyms = ["decision", "action", "move", "step", "response", "reaction", "reaction"];
 
 // OU ADMIN paragraph 2
-const setsSynonyms = ["sets", "places", "puts"];
+const setsSynonyms = ["sets", "places", "establishes", "creates"];
 const dangerousSynonyms = ["dangerous", "harmful", "destructive", "detrimental"];
-const precedentSynonyms = ["precedent", "example", "model", "pattern", "guide"];
+const precedentSynonyms = ["precedent", "example", "model", "pattern"];
 const universitySynonyms = ["University of Oklahoma", "OU", "University", "Institution"];
 
 // OU ADMIN paragraph 3
@@ -117,11 +113,11 @@ function generateRandomEmail() {
 
     `${greeting} ${admin} and ${oklahoma} ${leaders},
 
-As a ${concerned} community member, I am ${writing} to ${express} ${extreme} ${moralOutrage} over your ${decision} to place Graduate Teaching Assistant Mel Curth on administrative leave. 
+As a ${concerned} community member, I am ${writing} to ${express} ${extreme} ${moralOutrage} over the ${university}'s ${decision} to place Graduate Teaching Assistant Mel Curth on administrative leave. 
 
 The OU administration’s capitulation ${sets} a ${dangerous} ${precedent} at the ${university} by emboldening a culture in which academic integrity is optional, and professors can be bullied into overriding their professional judgment to avoid political retaliation. 
 
-We ${demand} that ${university} ${immediately} ${reinstate} Mel Curth and any other ${improperly} ${penalized} faculty in full standing, issue a public apology, and ${reaffirm} the right of OU faculty to grade based on academic performance, free from political interference.
+We ${demand} the ${university} ${immediately} ${reinstate} Mel Curth and any other ${improperly} ${penalized} faculty in full standing, issue a public apology, and ${reaffirm} the right of OU faculty to grade based on academic performance, free from political interference.
 
 In a time when higher education is under ${continuous} assault, stand on the right side of history now!
 
@@ -129,7 +125,6 @@ ${closing},`;
 
   const encodedSubject = encodeURIComponent(subjectLine);
   const encodedBody = encodeURIComponent(emailBody);
-  //const emailLink = `mailto:?subject=${encodedSubject}&body=${encodedBody}`;
   const emailLink = `mailto:${emailAddresses.join(
     ","
   )}?subject=${encodedSubject}&body=${encodedBody}`;
